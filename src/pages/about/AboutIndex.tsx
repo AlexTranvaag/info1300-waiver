@@ -10,8 +10,8 @@ interface IProps {}
 const AboutIndex: React.FC<IProps> = props => {
     return (
         <div className='max-w-7xl mx-auto px-4 pb-4 sm:px-6 lg:px-8'>
-            <section className="flex flex-row justify-center py-16">
-                <div className="w-80">
+            <section className="flex flex-col lg:flex-row justify-center py-16">
+                <div className="w-80 mx-auto mb-10 lg:mx-none lg:mb-0">
                     <img src={Book} />
                 </div>
                 <div className="flex flex-col max-w-2xl px-16 my-auto">
@@ -21,14 +21,14 @@ const AboutIndex: React.FC<IProps> = props => {
                     </p>
                 </div>
             </section>
-            <section className="flex flex-row justify-center py-16">
-                <div className="flex flex-col max-w-2xl px-16 my-auto">
+            <section className="flex flex-col lg:flex-row justify-center py-16">
+                <div className="flex flex-col max-w-2xl px-16 my-auto mb-10 lg:mb-0">
                     <h1 className="font-bold text-4xl">Why Cozy Board Games?</h1>
                     <p className="py-6 text-lg">
                         In an age of digital deluge, we found solace in the tactile pleasure of moving pieces on a board while wrapped in a warm blanket with a cuppa in hand. Cozy board games aren't just about strategy or winning, but about the shared moments, stories, and the snug ambiance they create.
                     </p>
                 </div>
-                <div className="w-80">
+                <div className="w-80 mx-auto lg:mx-none">
                     <img src={Table} />
                 </div>
             </section>

@@ -28,13 +28,13 @@ const Recent: React.FC<IProps> = props => {
                 </NavLink>
             </div>
             <div className="flex flex-row py-6 space-x-4 justify-center">
-                <button className="text-lg" onClick={(e) => {updateGames(-1)}}>
+                <button className="text-xl" onClick={(e) => {updateGames(-1)}}>
                     ←
                 </button>
                 {games.slice(0, 3).map((game: any) => (
-                    <img key={game.id} src={game.image} alt={game.name} className="w-96 h-96 bg-gray-400 rounded-lg" />
+                    <img key={game.id} src={game.image} alt={game.name} className="w-52 h-52 lg:w-96 lg:h-96 bg-gray-400 rounded-lg" />
                 ))}
-                <button className="text-lg" onClick={(e) => {updateGames(1)}}>
+                <button className="text-xl" onClick={(e) => {updateGames(1)}}>
                     →
                 </button>
             </div>

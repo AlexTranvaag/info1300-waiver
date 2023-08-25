@@ -19,8 +19,8 @@ const Featured: React.FC<IProps> = props => {
             <div>
                 <h1 className="border-b border-slate-800 font-bold text-4xl py-4 max-w-lg">Featured Game</h1>
             </div>
-            <div className="flex flex-row py-10">
-                <div className="max-w-2xl rounded-xl overflow-hidden">
+            <div className="flex flex-col lg:flex-row py-10">
+                <div className="max-w-2xl rounded-xl overflow-hidden mx-auto mb-10 lg:mx-none lg:mb-none">
                     <img src={props.review.game.image.Everdell} alt={props.review.game.title} />
                 </div>
                 <div className="grow px-10">

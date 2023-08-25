@@ -7,11 +7,11 @@ interface IProps {
 
 const Hero: React.FC<IProps> = props => {
     return (
-        <header className="flex flex-row justify-center py-16">
-            <div className="w-96">
+        <header className="flex flex-col lg:flex-row justify-center py-16">
+            <div className="w-96 mx-auto mb-10 lg:mx-none lg:mb-0">
                 <img src={Table} />
             </div>
-            <div className="flex flex-col max-w-xl px-16 my-auto">
+            <div className="flex flex-col max-w-xl px-16 my-auto mx-auto lg:mx-none">
                 <h1 className="font-bold text-4xl">TeaTimeTables</h1>
                 <h5 className="text-2xl">Steep, Sit, Play</h5>
                 <p className="py-6 text-lg">
