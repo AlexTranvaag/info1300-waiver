@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import Everdell from '../../../assets/images/everdell-slim.png';
 import { StarIcon } from '@heroicons/react/20/solid'
 
 interface IProps {
@@ -22,7 +21,7 @@ const Featured: React.FC<IProps> = props => {
             </div>
             <div className="flex flex-row py-10">
                 <div className="max-w-2xl rounded-xl overflow-hidden">
-                    <img src={Everdell} />
+                    <img src={props.review.game.image.Everdell} alt={props.review.game.title} />
                 </div>
                 <div className="grow px-10">
                     <div className="flex flex-row justify-between">
@@ -39,9 +38,8 @@ const Featured: React.FC<IProps> = props => {
                                     key={rating}
                                     className={classNames(
                                         props.review.rating > rating ? 'text-yellow-400' : 'text-gray-200',
-                                        'h-10 w-10 flex-shrink-0'
+                                        'h-10 w-10'
                                     )}
-                                    aria-hidden="true"
                                 />
                             ))}
                         </div>

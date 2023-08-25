@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import Everdell from "../../../assets/images/everdell-slim.png";
-import Wingspan from "../../../assets/images/wingspan-slim.png";
-import Azul from "../../../assets/images/azul-slim.png";
 import { NavLink } from "react-router-dom";
 
 interface IProps {
@@ -35,7 +32,7 @@ const Recent: React.FC<IProps> = props => {
                     ←
                 </button>
                 {games.slice(0, 3).map((game: any) => (
-                    <img key={game.id} src={game.image} className="w-96 h-96 bg-gray-400 rounded-lg" />
+                    <img key={game.id} src={game.image} alt={game.name} className="w-96 h-96 bg-gray-400 rounded-lg" />
                 ))}
                 <button className="text-lg" onClick={(e) => {updateGames(1)}}>
                     →

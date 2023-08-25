@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink, useParams } from "react-router-dom";
-import Everdell from "../../assets/images/everdell-slim.png";
 import {StarIcon} from "@heroicons/react/20/solid";
 import Reviews from "../../reviews";
 
@@ -16,7 +15,7 @@ const GamesIndex: React.FC<IProps> = props => {
         return null;
     }
 
-    const review = Reviews.find((review) => review.id == parseInt(id));
+    const review = Reviews.find((review) => review.id === parseInt(id));
     if (!review) {
         return null;
     }
@@ -34,7 +33,7 @@ const GamesIndex: React.FC<IProps> = props => {
                 </div>
                 <div className="flex flex-row py-10">
                     <div className="max-w-2xl rounded-xl overflow-hidden">
-                        <img src={Everdell} />
+                        <img src={review.game.image.Everdell} alt={review.game.title} />
                     </div>
                     <div className="grow px-10">
                         <div className="flex flex-row justify-between">
@@ -51,9 +50,8 @@ const GamesIndex: React.FC<IProps> = props => {
                                         key={rating}
                                         className={classNames(
                                             review.rating > rating ? 'text-yellow-400' : 'text-gray-200',
-                                            'h-10 w-10 flex-shrink-0'
+                                            'h-10 w-10'
                                         )}
-                                        aria-hidden="true"
                                     />
                                 ))}
                             </div>
