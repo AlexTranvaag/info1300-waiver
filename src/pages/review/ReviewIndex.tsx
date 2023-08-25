@@ -17,7 +17,18 @@ const GamesIndex: React.FC<IProps> = props => {
 
     const review = Reviews.find((review) => review.id === parseInt(id));
     if (!review) {
-        return null;
+        return (
+            <div className='max-w-7xl mx-auto px-4 pb-4 sm:px-6 lg:px-8'>
+                <div>
+                    <NavLink to="/" className="text-lg transition ease-in-out duration-200 hover:transition-all hover:text-orange-700">
+                        ← Back
+                    </NavLink>
+                </div>
+                <div>
+                    <h1>Error: Could not locate review</h1>
+                </div>
+            </div>
+        );
     }
 
     return (

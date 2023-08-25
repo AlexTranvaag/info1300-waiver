@@ -13,6 +13,7 @@ After installation, you can run the project with
 `npm run start`
 
 # Design Artifacts
+- Layout located in `layout.md`
 - Target user profile located in `audience.md`
 - Wireframe located `src/assets/images/wireframe.png`
 - Images located in `src/assets/images`

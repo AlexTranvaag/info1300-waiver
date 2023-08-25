@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 interface IProps {
     title: string;
-    games: {id: number, name: string, image: string}[];
+    games: {id: number, reviewId: number, name: string, image: string}[];
 }
 
 const Recent: React.FC<IProps> = props => {
@@ -19,12 +19,10 @@ const Recent: React.FC<IProps> = props => {
                 )}
             </div>
             <div className="grid grid-cols-6 gap-4 py-6 justify-center">
-                {props.games.map((game: {id: number, name: string, image: string}) => (
-                    <img
-                        key={game.id}
-                        src={game.image}
-                        className="aspect-square bg-gray-400 rounded-lg"
-                    />
+                {props.games.map((game: {id: number, reviewId: number, name: string, image: string}) => (
+                    <NavLink key={game.id} to={`/review/${game.reviewId}`}>
+                        <img  src={game.image} alt={game.name} className="aspect-square bg-gray-400 rounded-lg" />
+                    </NavLink>
                 ))}
             </div>
         </section>
